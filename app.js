@@ -66,12 +66,12 @@ app.use("/campgrounds", campgroundRoutes);
 
 
 
-if (!process.env.IP) {
+if (!process.env.IP || !process.env.PORT) {
     app.listen(3000, function() {
         console.log("YelpCamp Server has Started!");
     });
 } else {
     app.listen(process.env.PORT, process.env.IP, function() {
-        console.log("YelpCamp Server has Started!");
+        console.log("I am listening...!");
     });
 }
