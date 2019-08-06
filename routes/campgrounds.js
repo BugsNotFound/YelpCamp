@@ -110,7 +110,7 @@ router.get("/:id", function(req, res) {
     //render show template with that campground
     Campground.findById(req.params.id).populate("comments").exec(function(err, foundCampground) {
         if (err) {
-            console.log(error);
+            console.log(err);
             req.flash("error", "Something went wrong");
             res.redirect("back");
         } else {
