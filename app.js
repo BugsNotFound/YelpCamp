@@ -22,7 +22,7 @@ var commentRoutes = require("./routes/comments"),
 //seedDB();     // seed the database
 
 //mongoose.connect("mongodb://localhost/yelp_camp", { useNewUrlParser: true });
-mongoose.connect("mongodb://himansh:himansh123@ds257097.mlab.com:57097/yelp_camp", { useNewUrlParser: true });
+mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true });
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
