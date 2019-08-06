@@ -20,7 +20,7 @@ var commentRoutes = require("./routes/comments"),
 
 
 //seedDB();     // seed the database
-
+console.log(process.env);
 //mongoose.connect("mongodb://localhost/yelp_camp", { useNewUrlParser: true });
 mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true });
 
